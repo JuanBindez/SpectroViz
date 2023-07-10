@@ -1,0 +1,15 @@
+cffi==1.15.1
+contourpy==1.1.0
+cycler==0.11.0
+fonttools==4.40.0
+kiwisolver==1.4.4
+matplotlib==3.7.2
+numpy==1.25.1
+packaging==23.1
+Pillow==10.0.0
+pycparser==2.21
+pyparsing==3.0.9
+python-dateutil==2.8.2
+scipy==1.11.1
+six==1.16.0
+sounddevice==0.4.6
