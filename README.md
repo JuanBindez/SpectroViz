@@ -1,2 +1,2 @@
-# SpectraViz
+# SpectroViz
 audio spectrogram
