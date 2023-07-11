@@ -6,7 +6,7 @@ import random
 import datetime
 
 freq = 44100
-duration = int(input("Digite quantos segundos de gravação você quer >>" + Color.RESET))
+duration = int(input("Digite quantos segundos de gravação você quer >>"))
 recording = sd.rec(int(duration * freq),  
                    samplerate=freq, channels=2)
 
