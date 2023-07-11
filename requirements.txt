@@ -13,3 +13,4 @@ python-dateutil==2.8.2
 scipy==1.11.1
 six==1.16.0
 sounddevice==0.4.6
+wavio==0.0.4
