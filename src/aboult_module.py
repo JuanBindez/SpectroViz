@@ -1,6 +1,6 @@
 # this is part of the SpectroViz project.
 #
-# Release: v1.0-rc1
+# Release: v0.1.dev
 #
 # Copyright ©  2023  Juan Bindez  <juanbindez780@gmail.com>
 #
@@ -47,7 +47,7 @@ def help_info():
                 font=custom_font_version).place(x=185, y=45)
 
    label = Label(window, 
-                text="Remove image background.", ).place(x=120, y=88)
+                text="descriptions here", ).place(x=120, y=88)
 
    label = Label(window,
                 text="This software comes with absolutely no warranty.", ).place(x=45, y=154)

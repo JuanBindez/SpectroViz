@@ -1,6 +1,6 @@
 # this is part of the SpectroViz project.
 #
-# Release: v1.0-rc1
+# Release: v0.1.dev
 #
 # Copyright ©  2023  Juan Bindez  <juanbindez780@gmail.com>
 #

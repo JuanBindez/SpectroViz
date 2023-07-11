@@ -1,6 +1,6 @@
 # this is part of the SpectroViz project.
 #
-# Release: v1.0-rc1
+# Release: v0.1.dev
 #
 # Copyright ©  2023  Juan Bindez  <juanbindez780@gmail.com>
 #
@@ -23,19 +23,29 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.io import wavfile
 from scipy.signal import spectrogram
+import tkinter as tk
+from tkinter import filedialog
+from tkinter import messagebox
 
 
-sample_rate, audio_data = wavfile.read('Nirvana-Drain-You-_Audio_.wav')
+def spectrogram_extract():
+    file_path = filedialog.askopenfilename()
+    sample_rate, audio_data = wavfile.read(file_path)
 
-if len(audio_data.shape) > 1:
-    audio_data = audio_data.mean(axis=1)
+    if len(audio_data.shape) > 1:
+        audio_data = audio_data.mean(axis=1)
 
-frequencies, times, spectrogram_data = spectrogram(audio_data, sample_rate)
+    frequencies, times, spectrogram_data = spectrogram(audio_data, sample_rate)
 
-plt.figure(figsize=(10, 6))
-plt.pcolormesh(times, frequencies, 10 * np.log10(spectrogram_data), shading='auto')
-plt.colorbar(label='Intensity (dB)')
-plt.ylabel('Frequency (Hz)')
-plt.xlabel('Time (s)')
-plt.title('Spectrogram')
-plt.show()
+    plt.figure(figsize=(15, 6))
+
+    plt.pcolormesh(times, frequencies, 10 * np.log10(spectrogram_data), shading='auto', cmap='plasma')  # Mudando a cor para 'hot'
+    plt.colorbar(label='Intensity (dB)')
+    plt.ylabel('Frequency (Hz)')
+    plt.xlabel('Time (s)')
+    plt.title('SpectroViz v0.1.dev')
+
+    #plt.xlim(0, 2000)
+
+    plt.show()
+

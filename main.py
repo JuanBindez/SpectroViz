@@ -1,6 +1,6 @@
 # this is part of the SpectroViz project.
 #
-# Release: v1.0-rc1
+# Release: v0.1.dev
 #
 # Copyright ©  2023  Juan Bindez  <juanbindez780@gmail.com>
 #
@@ -27,27 +27,32 @@ from tkinter import *
 
 from src.aboult_module import help_info
 from src.check_update_module import *
+from src.spectrogram_module import spectrogram_extract
 
 
 window = Tk()
 window.title("SpectroViz")
-window.geometry("530x375")
+window.geometry("800x600")
 
 
 custom_font1 = ('Arial', 40)
 label = Label(window,
                 text="SpectroViz",
-                font=custom_font1,).place(x=155, y=100)
-
-custom_font2 = ('Arial', 10)
-label = Label(window,
-                text="select the image and the program will remove the background",
-                font=custom_font2,).place(x=90, y=200)
+                font=custom_font1,).place(x=7, y=10)
 
 custom_font3 = ('Arial', 12)
 label = Label(window,
-                text="v1.0-rc1",
-                font=custom_font3,).place(x=5, y=350)
+                text="v0.1.dev",
+                font=custom_font3,).place(x=280, y=40)
+
+
+button_spectrogram = Button(window,
+                text="Spectrogram",
+                command=spectrogram_extract,
+                font=('Arial'),
+                width=57,
+                height=10,).place(x=20, y=280)
+
 
 menu_barra = Menu(window)
 
