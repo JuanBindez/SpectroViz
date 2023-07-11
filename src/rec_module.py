@@ -1,9 +1,11 @@
-import sounddevice as sd 
-from scipy.io.wavfile import write 
-import wavio as wv
 import os
 import random
 import datetime
+
+import sounddevice as sd 
+from scipy.io.wavfile import write 
+import wavio as wv
+
 
 freq = 44100
 duration = int(input("Digite quantos segundos de gravação você quer >>"))
