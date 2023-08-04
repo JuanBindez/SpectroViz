@@ -53,7 +53,6 @@ button_spectrogram = Button(window,
                 width=57,
                 height=10,).place(x=20, y=280)
 
-
 menu_barra = Menu(window)
 
 menu_arquivo = Menu(menu_barra, tearoff=0)
